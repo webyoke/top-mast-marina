@@ -1,0 +1,39 @@
+{% extends "_layout.html" %}
+
+{% block content %}
+    <div class='row content'>
+        <h1 class='title'>{{ entry.boatingTitle }}</h1>
+        {{ entry.content }}
+
+        <hr>
+
+        <div class='bar-menu'>
+
+        {% for item in entry.menuItems.matrixFieldHandle %}
+
+            {% if item == 'menuCategory' %}
+
+                <div class='category'>{{ item.menuCategory }}</div>
+
+            {% elseif item == 'menuItem' %}
+
+                <div class='row'>
+
+                    <div class='small-11 columns item'>
+                        <div>{{ item.itemName }}</div>
+                        <div>{{ item.description }}</div>
+                    </div>
+
+                    <div class='small-1 columns price'>
+                        <div>${{ item.price }}</div>
+                    </div>
+
+                </div>
+
+            {% endif %}
+
+        {% endfor %}
+        </div>
+
+    </div>
+{% endblock %}

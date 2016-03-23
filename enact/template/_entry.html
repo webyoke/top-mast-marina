@@ -1,0 +1,28 @@
+{% extends "_layout.html" %}
+
+{% block content %}
+
+    <div class='content row'>
+        <h1 class='title'>{{ entry.boatingTitle }}</h1>
+        {{ entry.content }}
+
+        {% if entry.layout == 'slipOrStorage' %}
+
+            <h2 class='title'>Top Mast Marina {{ entry.title }}</h2>
+            
+            <div class='units'>
+            {% for unit in entry.information.matrixFieldHandle %}
+                <div class='unit'>
+                    <p class='size'>{{ unit.width }}ft X {{ unit.length }}ft</p>
+                    <p class='price'>${{ unit.price }}</p>
+                    <p class='available'>{{ unit.available }}<br>available</p>
+                </div>
+            {% endfor %}
+            </div>
+
+        {% endif %}
+
+    </div>
+
+
+{% endblock %}

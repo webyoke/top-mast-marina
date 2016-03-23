@@ -1,0 +1,155 @@
+@import url(https://fonts.googleapis.com/css?family=Lora);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+body {
+  font-family: 'Raleway', serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lora', serif; }
+
+header {
+  text-align: center;
+  background-color: #FFF;
+  border-radius: 0px 0px 5px 5px; }
+  header .logo {
+    padding: 4px; }
+    header .logo img {
+      height: 110px; }
+  header .menu {
+    display: block;
+    width: 100%;
+    padding: 12px 0px; }
+    header .menu a {
+      color: #222;
+      padding: 0px 10px;
+      margin: 10px;
+      border-bottom: 1px solid #20B8EA; }
+
+.full-bg-img {
+  position: fixed;
+  z-index: -5;
+  top: 0;
+  width: 100%; }
+  .full-bg-img img {
+    width: 100%;
+    height: auto; }
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+  .full-bg-img {
+    width: 135%; } }
+.content {
+  margin: 80px auto;
+  padding: 40px;
+  border-radius: 3px;
+  background-color: #FFF;
+  box-shadow: 0px 0px 4px -2px #6FDBFF; }
+  .content .title {
+    text-align: center;
+    border-bottom: 3px solid #6FDBFF; }
+
+.welcome-message {
+  position: relative;
+  text-align: center; }
+  .welcome-message .message {
+    font-weight: bold;
+    font-size: 3em;
+    margin: 0px;
+    padding: 12px;
+    margin-bottom: 20%;
+    background-color: #FFF;
+    border-radius: 0px 0px 5px 5px;
+    color: #20B8EA; }
+
+.quote {
+  position: relative;
+  text-align: center;
+  padding: 40px 20px;
+  margin: 40px auto;
+  width: 80%;
+  border: 1px solid #F2F2F2;
+  border-left: none;
+  border-right: none; }
+  .quote, .quote p {
+    font-family: 'Lora', serif !important;
+    font-size: 1.5em; }
+  .quote p {
+    margin-bottom: 0px; }
+  .quote:before, .quote:after {
+    content: '"';
+    position: absolute;
+    font-size: 6em;
+    top: 10%;
+    color: #23C8FF; }
+  .quote:before {
+    left: -10px; }
+  .quote:after {
+    right: -10px; }
+
+.units {
+  text-align: center; }
+  .units .unit {
+    display: inline-block;
+    background-color: #23C8FF;
+    color: #222;
+    margin-right: 12px;
+    padding: 20px;
+    text-align: center; }
+    .units .unit p {
+      margin-bottom: 8px;
+      line-height: 16px; }
+    .units .unit .price, .units .unit .available {
+      margin-top: 20px;
+      font-weight: bold; }
+
+.bar-menu .category {
+  font-size: 1.3em;
+  font-weight: bold;
+  border-bottom: 3px solid #20B8EA;
+  margin: 10px 0px; }
+.bar-menu .item div:last-child {
+  font-size: .9em;
+  color: #386D7F; }
+.bar-menu .price {
+  text-align: right;
+  font-size: 1.2em; }
+
+.event-banner {
+  position: relative;
+  min-height: 500px;
+  display: block;
+  width: 100%;
+  overflow: hidden; }
+  .event-banner img {
+    z-index: -5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+    margin-top: -20%; }
+  .event-banner .event {
+    margin-top: 10%;
+    padding: 40px;
+    background-color: #FFF;
+    position: relative;
+    text-align: center; }
+    .event-banner .event .title {
+      color: #386D7F; }
+
+.event-date {
+  text-align: center;
+  padding: 40px;
+  font-size: 2em; }
+
+.events a.row {
+  display: block;
+  margin-bottom: 80px !important;
+  padding-bottom: 80px;
+  border-bottom: 1px solid #20B8EA; }
+.events img {
+  padding-right: 10px; }
+.events .description {
+  color: #386D7F;
+  font-size: .9em; }
+.events .date {
+  color: #222; }
+
+/*# sourceMappingURL=css.css.map */

@@ -1,0 +1,43 @@
+{% extends "_layout.html" %}
+
+{% block content %}
+
+    <div class='content row homepage'>
+        {% for block in entry.contentBlocks.matrixFieldHandle %}
+
+            {% if block == 'heading' %}
+
+                <h1 class='title text-{{ block.position }}'>{{ block.theHeading }}</h1>
+
+            {% elseif block == 'video' %}
+
+                {{ block.aVideo.fullWidth }}
+
+            {% elseif block == 'contentImage' %}
+
+                <div class='row' style='color : {{ block.fontColor }}; background-color : {{ block.backgroundColor }}; margin: 40px 0px;'>
+                    <div style='max-width:200px; float : {{ block.imagePosition }};'>
+                        {% for image in block.images.assetFieldHandle %}
+                            {{ image }}
+                        {% endfor %}
+                    </div>
+
+                    <div>
+                        {{ block.content }}
+                    </div>
+
+                </div>
+
+            {% elseif block == 'quote' %}
+
+                <div class='quote'>
+                    {{ block.theQuote }}
+                </div>
+
+            {% endif %}
+
+        {% endfor %}
+    </div>
+
+
+{% endblock %}

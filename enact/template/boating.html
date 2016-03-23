@@ -1,0 +1,51 @@
+{% extends "_layout.html" %}
+
+{% block content %}
+
+    <div class='content row'>
+
+        {% if entry.atDepth == 1 %}
+            {% set parent = entry.getParentEntry %}
+            <ul class='breadcrumbs'>
+                <li><a href='{{ parent.url }}'>{{ parent.title }}</a></li>
+                <li class='current'>{{ entry.title }}</li>
+            </ul>
+        {% endif %}
+
+        <h1 class='title'>{{ entry.boatingTitle }}</h1>
+        {{ entry.content }}
+
+        {% if entry.url == '/boating' %}
+
+            {% set links = entry.getChildEntries.fetch %}
+
+            <ul>
+            {% for link in links %}
+                <li>{{ link }}</li>
+            {% endfor %}
+            <ul>
+
+        {% endif %}
+
+        {% if entry.layout == 'slipOrStorage' %}
+
+            <h2 class='title'>Top Mast Marina {{ entry.title }}</h2>
+            
+            <div class='units'>
+            {% for unit in entry.information.matrixFieldHandle %}
+                <div class='unit'>
+                    <p class='size'>{{ unit.width }}ft X {{ unit.length }}ft</p>
+                    <p class='price'>${{ unit.price }}</p>
+                    <p class='available'>{{ unit.available }}<br>available</p>
+                </div>
+            {% endfor %}
+            </div>
+
+            <p class='text-center'><strong>* All prices are on a per month basis. Minimum of 1 week use required.</strong></p>
+
+        {% endif %}
+
+    </div>
+
+
+{% endblock %}

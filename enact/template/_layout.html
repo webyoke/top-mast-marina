@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang='{{ enact.view.lang }}'>
+    <head>
+        <meta charset='{{ enact.view.charset }}' />
+        <meta content='noindex,nofollow' name='robots'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+
+        {% if enact.view.favIcon %}
+            <link type='image/x-icon' href='{{ enact.view.favIcon }}' rel='shortcut icon'>
+        {% endif %}
+
+        {% if enact.view.desc %}
+            <meta name="description" content="{{ enact.view.desc }}"/>
+        {% endif %}
+
+        {{ enact.view.styleSrc( cpSlug('resource/css/foundation.min.css') ) }}
+        {{ enact.view.styleSrc('/css/css.css') }}
+
+        <title>{{ enact.view.title }}</title>
+
+    </head>
+    <body> 
+
+        <header class='row'>
+            <div class='logo'>
+                <a href='/'>{{ enact.siteLogo }}</a>
+            </div>
+
+            <div class='menu'>
+                {% for item in enact.globals.siteMenu.matrixFieldHandle %}
+                    {% if item.itemLink.entryFieldHandle[0] %}
+                        {% set link = item.itemLink.entryFieldHandle[0].url %}
+                    {% else %}
+                        {% set link = item.textLink  %}
+                    {% endif %}
+                    <a href='{{ link }}'>{{ item.itemTitle }}</a>
+                {% endfor %}
+            </div>
+
+        </header>
+
+        {% block content %}
+        {% endblock %}
+
+        {% if entry.backgroundImage %}
+            <div class='full-bg-img'>{{ entry.backgroundImage.assetFieldHandle[0].getImgHtml }}</div>
+        {% endif %}
+
+    </body>
+</html>
