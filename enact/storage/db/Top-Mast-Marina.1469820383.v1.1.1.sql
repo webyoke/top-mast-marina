@@ -3,7 +3,7 @@
 -- Host: localhost	Database: TOP_MAST_MARINA
 -- ------------------------------------------------------
 -- Server version 	5.5.47-0+deb8u1
--- Date: Fri, 29 Jul 2016 14:51:29 -0400
+-- Date: Fri, 29 Jul 2016 15:26:23 -0400
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -753,7 +753,7 @@ CREATE TABLE `enact_user` (
 LOCK TABLES `enact_user` WRITE;
 /*!40000 ALTER TABLE `enact_user` DISABLE KEYS */;
 SET autocommit=0;
-INSERT INTO `enact_user` VALUES (1,NULL,NULL,'Admin','admin','admin','brad@bradleyhamilton.com','db30f094be7b47d8ed322a5b94aa3ed6c7c20291eb59b6276cf525e5ef57adc7a0b3f7ae91883ce9c9b07f3a5081e087a6690fd131b3cba959efa36240101897','a1dbdfad5faac273bba49b1d251c40f857138ad5a5df0f504b0bd7cc644af48bb6c651549550cab5651074ab610fed320ddab0ca23900bc7dbb6e8623c21d4fc','2015-12-06 13:19:47','2016-07-29 13:18:48',1,NULL,NULL,NULL,'2015-12-16 17:32:10');
+INSERT INTO `enact_user` VALUES (1,NULL,NULL,'Admin','admin','admin','support@webyoke.com','db30f094be7b47d8ed322a5b94aa3ed6c7c20291eb59b6276cf525e5ef57adc7a0b3f7ae91883ce9c9b07f3a5081e087a6690fd131b3cba959efa36240101897','a1dbdfad5faac273bba49b1d251c40f857138ad5a5df0f504b0bd7cc644af48bb6c651549550cab5651074ab610fed320ddab0ca23900bc7dbb6e8623c21d4fc','2015-12-06 13:19:47','2016-07-29 13:18:48',1,NULL,NULL,NULL,'2015-12-16 17:32:10');
 /*!40000 ALTER TABLE `enact_user` ENABLE KEYS */;
 UNLOCK TABLES;
 COMMIT;
@@ -865,4 +865,4 @@ COMMIT;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on: Fri, 29 Jul 2016 14:51:29 -0400
+-- Dump completed on: Fri, 29 Jul 2016 15:26:23 -0400

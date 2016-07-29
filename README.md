@@ -51,14 +51,18 @@ To get started:
   mysql -u root -p"yourpassword" -e "CREATE DATABASE TOP_MAST_MARINA"
 
   ```
-6. Import the dump of the database (path to the dump is relative to root of site).
+6. Import the dump of the database (run from the root of your site).
   ```
 
-  mysql -u root -p"yourpassword" TOP_MAST_MARINA < enact/storage/db/TOPMASTMARINA.sql
+    sudo php public/index.php enactRestoreDBFromLatestBackup
 
   ```
-7. Enter/edit your database credentials in `enact/config/db.php`.
-8. Access your site via `top-mast-marina.localhost`, if there are problems/permission errors Enact will let you know.
-9. You can access the control panel via `top-mast-marina.localhost/admin/login` the usename is `admin` and the
-   password is `password`. 
-10. Have fun :]!
+7. Change the admin password (run from the root of your site).
+  ```
+    sudo php public/index.php setPassword 'support@webyoke.com' 'your-password'
+  ```
+8. Enter/edit your database credentials in `enact/config/db.php`.
+9. Access your site via `top-mast-marina.localhost`, if there are problems/permission errors Enact will let you know.
+10. You can access the control panel via `top-mast-marina.localhost/admin/login` the usename is `admin` and the
+   password is what you set in step 7. 
+11. Have fun :]!
