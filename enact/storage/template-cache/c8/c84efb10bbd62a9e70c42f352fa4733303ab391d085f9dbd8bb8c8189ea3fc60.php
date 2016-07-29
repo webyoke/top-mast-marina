@@ -54,7 +54,7 @@ class __TwigTemplate_9de0918c1d8d9078446f12a56a5b58ec3d73d1a36173ae8fad20784e132
         echo "
         ";
         // line 16
-        echo $this->getAttribute($this->getAttribute((isset($context["enact"]) ? $context["enact"] : null), "view", array()), "styleSrc", array(0 => enact_cpSlug("resource/css/foundation.min.css")), "method");
+        echo $this->getAttribute($this->getAttribute((isset($context["enact"]) ? $context["enact"] : null), "view", array()), "styleSrc", array(0 => "/css/foundation.min.css"), "method");
         echo "
         ";
         // line 17
@@ -172,7 +172,7 @@ class __TwigTemplate_9de0918c1d8d9078446f12a56a5b58ec3d73d1a36173ae8fad20784e132
 /*             <meta name="description" content="{{ enact.view.desc }}"/>*/
 /*         {% endif %}*/
 /* */
-/*         {{ enact.view.styleSrc( cpSlug('resource/css/foundation.min.css') ) }}*/
+/*         {{ enact.view.styleSrc('/css/foundation.min.css') }}*/
 /*         {{ enact.view.styleSrc('/css/css.css') }}*/
 /* */
 /*         <title>{{ enact.view.title }}</title>*/
